@@ -167,7 +167,6 @@ const messages = [
 ];
 
 
-const music = document.getElementById("bg-music");
 let index = 0;
 
 const messageEl = document.getElementById("message");
@@ -176,16 +175,10 @@ const imgEl = document.getElementById("img");
 const imgDiv = document.getElementById("imgs");
 const final = document.getElementById("final-message");
 
-btn.addEventListener("click", () => {
-  // Play audio on first click if it's not already playing
-  if (music.paused) {
-    music.play().catch((err) => {
-      console.log("Autoplay blocked:", err);
-    });
-  }
+
 
   // Your existing button logic here...
-});
+
 
 window.onload = () => {
   const first = messages[0];
