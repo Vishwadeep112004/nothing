@@ -1,0 +1,245 @@
+body {
+  background: linear-gradient(to right, #f15d6a, #bb37b0);
+  font-family: 'Comic Sans MS', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  color: black;
+}
+
+h1, h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  animation: fade 1s ease-in-out;
+}
+
+/* Container for text and image */
+#imgs {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fade 1s ease-in-out;
+  /* REMOVE this: display: none; */
+}
+
+
+#img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Heading message */
+#message {
+  font-size: 2em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Button styling */
+#next-btn {
+  height: 70px;
+  width: 200px;
+  padding: 12px 25px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 15px;
+  background: #fff;
+  color: #bb377d;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+#next-btn:hover {
+  background-color: #ffd1dc;
+  color: #000;
+  font-weight: 700;
+  transform: scale(1.05);
+}
+
+/* Simple fade animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #bb377d;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hearts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* clicks pass through */
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  background: red;
+  transform: rotate(45deg);
+  opacity: 0.7;
+  animation-timing-function: linear;
+  /* Shape of heart */
+  width: 20px;
+  height: 20px;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+
+.lastBtn
+{  
+  height: 70px;
+  width: 250px;
+  padding: 12px 25px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 15px;
+  background: #fff;
+  color: #bb377d;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-weight: 700;   
+}
+
+#lastBtn:hover {
+  background-color: #ffd1dc;
+  color: #000;
+  font-weight: 700;
+  transform: scale(1.05);
+}
+
+
+#final-message {
+  position: relative;
+  height: 500px; /* adjust as needed */
+  text-align: center;
+}
+
+#nahBtn {
+  position: absolute;
+  transition: top 0.1s ease, left 0.1s ease; /* quick movement */
+}
+
+.hidden {
+  display: none;
+}
+
+#by-by {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#imgs_last {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#img_last {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.balloons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -10;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 60px;
+  border-radius: 50% 50% 50% 50%;
+  background-color: red;
+  animation: floatUp 8s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}

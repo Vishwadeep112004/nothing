@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ruthe Ko Mana Lo</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+    <audio id="bg-music" autoplay loop>
+  <source src="imgs/Mast Magan 2 States 128 Kbps.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h1 id="message" style="color: black"></h1>
+    <div id="imgs" >
+        <img id="img" src="" alt="Cute Image" style="display: none;" />
+    </div>
+    
+    
+    <button id="next-btn"></button>
+
+    <div id="final-message" class="hidden">
+      <h2>Ab to maan jao... 🥺🥺</h2>
+      <button id="nahBtn" class="lastBtn">Nahh.. 😏😏😏</button> 
+      <button onclick="acceptLove()" class="lastBtn">Haa Vishu 😚😚😚😚</button>
+    </div>
+
+    <div id="by-by" class="hidden">
+        <h1 id="message" style="color: black">This is for you Baby😚😚😚</h1>
+      <div id="imgs_last" >
+        <img id="img_last" src="" alt="Cute Image"  />
+        </div>
+    </div>
+  </div>
+
+  <!-- Floating Hearts -->
+  <div class="hearts"></div>
+  <div class="balloons"></div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
